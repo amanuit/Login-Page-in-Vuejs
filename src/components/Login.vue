@@ -54,6 +54,8 @@ export default {
         params: { items: this.items }
       });
       console.log(this.form);
+            this.items = this.$route.params.items;
+
     }
   }
 };
