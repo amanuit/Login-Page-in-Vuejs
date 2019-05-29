@@ -1,17 +1,28 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="test-app">
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Registration from './components/Registration.vue'
+import Data from './components/Data.vue'
 
 export default {
-  name: 'app',
+  name: 'test-app',
   components: {
-    HelloWorld
+    Registration
+  },
+  data(){
+    return {
+      message:"Hi All"
+    }
+  },
+
+  methods:{
+  parentSubmit(event){
+   console.log(event);
+  }
   }
 }
 </script>
@@ -19,8 +30,6 @@ export default {
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
